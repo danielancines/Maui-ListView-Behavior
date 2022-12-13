@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:My="clr-namespace:Maui.ListView.Report"
+             x:Class="Maui.ListView.Report.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <ListView ItemsSource="{Binding People}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <My:MyRadioButton GroupName="Group" Content="{Binding Name}" IsChecked="{Binding IsSelected}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Get Selected" Clicked="Button_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
