@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace Maui.ListView.Report;
 
@@ -22,7 +23,8 @@ public partial class MainPage : ContentPage
 
     void Button_Clicked(System.Object sender, System.EventArgs e)
     {
-		var selectedPerson = this.People.FirstOrDefault(p => p.IsSelected);
+		this.MyLabel.Text = this.People.FirstOrDefault(p => p.IsSelected).Name;
+		
     }
 }
 
@@ -36,7 +38,7 @@ public class MyRadioButton : RadioButton
 {
 	public MyRadioButton()
 	{
-		Console.WriteLine($"Im Alive {this.GetHashCode()}");
+		Debug.WriteLine($"Im Alive {this.GetHashCode()}");
 	}
 }
 

@@ -20,7 +20,7 @@
                 </ListView.ItemTemplate>
             </ListView>
             <Button Text="Get Selected" Clicked="Button_Clicked"/>
-
+            <Label x:Name="MyLabel"/>
         </VerticalStackLayout>
     </ScrollView>
 
